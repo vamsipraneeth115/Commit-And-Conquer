@@ -27,7 +27,7 @@ jobs:
           GH_NAME: ${{ secrets.GH_NAME }}
         run: |
           leaderboard=$(cat leaderboard.json)
-          leaderboard_content=$(jq -r '.data | map("- \(.name): \(.points)") | join("\n")' leaderboard.json)
+          leaderboard_content=$(jq -r '.data | to_entries | map("\(.key + 1). \(.value.name): \(.value.points)") | join("\n")' leaderboard.json)
           awk -v content="$leaderboard_content" 'BEGIN {found=0} /<!-- LEADERBOARD_START -->/ {print; print content; found=1; next} /<!-- LEADERBOARD_END -->/ {found=0} !found' README.md > README.tmp && mv README.tmp README.md
           git config --global user.email "${{ secrets.GH_EMAIL }}"
           git config --global user.name "${{ secrets.GH_NAME }}"
