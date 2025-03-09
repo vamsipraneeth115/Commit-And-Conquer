@@ -1,0 +1,32 @@
+name: Update Leaderboard
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch leaderboard
+        id: fetch-leaderboard
+        run: |
+          curl -s https://6c4f-117-216-223-59.ngrok-free.app/ -o leaderboard.json
+
+      - name: Update README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          leaderboard=$(cat leaderboard.json)
+          leaderboard_content=$(jq -r '.data | map("- \(.name): \(.points)") | join("\n")' leaderboard.json)
+          sed -i '/<!-- LEADERBOARD_START -->/,/<!-- LEADERBOARD_END -->/c\<!-- LEADERBOARD_START -->\n'"$leaderboard_content"'\n<!-- LEADERBOARD_END -->' README.md
+          git config --global user.email "somnathumapathi7@gmail.com"
+          git config --global user.name "Somnathumapathi"
+          git add README.md
+          git commit -m "Update leaderboard"
+          git push
