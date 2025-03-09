@@ -118,6 +118,6 @@ repo-root/
 
 <!-- LEADERBOARD_START -->
 - Hi123: 10
-- Hello: 20
+- Hello1: 20
 <!-- LEADERBOARD_END -->
 
