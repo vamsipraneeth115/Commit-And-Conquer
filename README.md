@@ -115,6 +115,7 @@ repo-root/
 ## Notes
 - The frontend and backend should run concurrently for full functionality.
 - Modify environment variables as needed.
+- If a team finds a issue or bugs they need to create it with a tag called Player-issue
 
 ---
 
