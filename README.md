@@ -72,11 +72,49 @@ repo-root/
 
 ---
 
+
+## Contributing Guidelines
+
+1. **Fork the repository** and clone it locally:
+   ```sh
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+2. Make your changes in the `main` branch of your fork.
+3. Commit your changes with a structured message:
+   - Format:
+     ```
+     Update <file-name>
+     
+     Fixes #<issue-number>  
+     Team <team-id>
+     ```
+   - Example:
+     ```
+     Update main.dart
+     
+     Fixes #1  
+     Team 12
+     ```
+4. Push your changes to your forked repository:
+   ```sh
+   git push origin main
+   ```
+5. Go to the **original repository** and create a **pull request (PR)** from your fork’s `main` branch.
+
+6. A maintainer will review and merge your PR.
+
+---
+
+
+
 ## Notes
 - The frontend and backend should run concurrently for full functionality.
 - Modify environment variables as needed.
 
 ---
+
+
 
 
 
