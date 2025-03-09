@@ -20,7 +20,6 @@ jobs:
         id: fetch-leaderboard
         run: |
           curl -s https://6c4f-117-216-223-59.ngrok-free.app/ -o leaderboard.json
-
       - name: Update README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
