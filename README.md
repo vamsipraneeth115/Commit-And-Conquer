@@ -119,6 +119,8 @@ repo-root/
 
 ---
 
+## LeaderBoard 🏆
+
 <!-- LEADERBOARD_START -->
 1. Hi123: 10
 2. Hello12345: 20
