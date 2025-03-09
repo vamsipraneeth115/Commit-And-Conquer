@@ -16,14 +16,14 @@ jobs:
       - name: Fetch leaderboard
         id: fetch-leaderboard
         run: |
-          curl -s https://httpbin.org/get -o leaderboard.json
+          curl -s https://6c4f-117-216-223-59.ngrok-free.app/ -o leaderboard.json
 
       - name: Update README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           leaderboard=$(cat leaderboard.json)
-          leaderboard_content=$(jq -r '.leaderboard | map("- \(.name): \(.points)") | join("\n")' leaderboard.json)
+          leaderboard_content=$(jq -r '.data | map("- \(.name): \(.points)") | join("\n")' leaderboard.json)
           sed -i '/<!-- LEADERBOARD_START -->/,/<!-- LEADERBOARD_END -->/c\<!-- LEADERBOARD_START -->\n'"$leaderboard_content"'\n<!-- LEADERBOARD_END -->' README.md
           git config --global user.email "somnathumapathi7@gmail.com"
           git config --global user.name "Somnathumapathi"
