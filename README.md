@@ -76,12 +76,13 @@ repo-root/
 ## Contributing Guidelines
 
 1. **Fork the repository** and clone it locally:
+   **DO NOT MERGE YOUR CODE TO THE MAIN BRANCH OF THE MAIN REPOSITORY**
    ```sh
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
    ```
-2. Make your changes in the `main` branch of your fork.
-3. Commit your changes with a structured message:
+3. Make your changes in the `main` branch of your fork.
+4. Commit your changes with a structured message:
    - Format:
      ```
      Update <file-name>
@@ -96,13 +97,13 @@ repo-root/
      Fixes #1  
      Team 12
      ```
-4. Push your changes to your forked repository:
+5. Push your changes to your forked repository:
    ```sh
    git push origin main
    ```
-5. Go to the **original repository** and create a **pull request (PR)** from your fork’s `main` branch.
+6. Go to the **original repository** and create a **pull request (PR)** from your fork’s `main` branch.
 
-6. A maintainer will review and merge your PR.
+7. A maintainer will review and merge your PR.
 
 ---
 
