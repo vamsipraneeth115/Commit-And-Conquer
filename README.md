@@ -78,7 +78,6 @@ repo-root/
 
 1. **Fork the repository** and clone it locally:
    
-2. **DO NOT MERGE YOUR CODE TO THE MAIN BRANCH OF THE MAIN REPOSITORY**
    ```sh
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
@@ -106,6 +105,8 @@ repo-root/
 7. Go to the **original repository** and create a **pull request (PR)** from your fork’s `main` branch.
 
 8. A maintainer will review and merge your PR.
+
+ **DO NOT MERGE YOUR CODE TO THE MAIN BRANCH OF THE MAIN REPOSITORY**
 
 ---
 
