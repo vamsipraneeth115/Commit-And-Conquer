@@ -29,6 +29,6 @@ jobs:
           awk -v content="$leaderboard_content" 'BEGIN {found=0} /<!-- LEADERBOARD_START -->/ {print; print content; found=1; next} /<!-- LEADERBOARD_END -->/ {found=0} !found' README.md > README.tmp && mv README.tmp README.md
           git config --global user.email "somnathumapathi7@gmail.com"
           git config --global user.name "Somnathumapathi"
-          git add README.md
+          git add README.md leaderboard.json
           git commit -m "Update leaderboard"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ByteXync/Commit-And-Conquer.git
