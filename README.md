@@ -128,5 +128,7 @@ repo-root/
 
 
 <!-- LEADERBOARD_START -->
+- Hi123: 10
+- Hello123: 20
 <!-- LEADERBOARD_END -->
 
