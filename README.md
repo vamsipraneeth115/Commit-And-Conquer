@@ -190,5 +190,7 @@ repo-root/
 66. It'sworkingsomehow : 0
 67. Hacktivate: 0
 68. PR RANGERS: 0
+69. Leviathan Squad: 0
+70. Octagram: 0
 <!-- LEADERBOARD_END -->
 
